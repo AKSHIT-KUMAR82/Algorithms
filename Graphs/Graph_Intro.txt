@@ -1,0 +1,43 @@
+What is Graph ???
+-> Graph is generally a non-linear data structure which consists of two units 1) Nodes/Vertex 2) Edges/Links
+
+Types of graphs : 
+
+1) Directed Graph : Undirected Edges
+2) Undirected Graph : Directed Edges 
+3) Cyclic Graph : Starting from a node and able to come again to it and vice verse for acyclic (Please see carefully for directed graph)
+4) Weighted Graph : Edges have Weight and vice verse for unweighted
+
+What is a path ?
+-> If we are starting with any start node then every node has a direct link with it's adjacent nodes in the path and one node can only be visited once.
+
+Degree :
+
+Degree of undirected graph : Degree of each vertex in the graph is equal to the total no. of neighbours connected to it.
+As each edge connects two vertex with each other in undirected graph so accordingly total degree of graph is 2*Edges 
+
+Degree of directed Graph : 
+In degree : Total no of edges incoming to a node is it's indegree
+Out degree : Total no of edges outgoing to a node is it's outdegree
+
+Representation of Graph :
+
+1) Adjacency Matrix : We create a 2d matrix of size VxV size (0 based indexing), (V+1)x(V+1) size (1 based indexing)
+It takes space O(N*N), Where N is the No. of verticles.
+
+2) Adjacency list : We create a list in which it's index values represents the node index/number then correspondingly we'll add list of their neighbour nodes.
+As we are storing all neighbours so it's equals to the degree of the graph : 2*E where E is the total no of edges in case of undirected graph.
+
+Hence, We use adjacency list for storing edges as it use less space then adjacency matrix.
+
+There are two ways to traverse graphs :
+
+1) BFS : Breadth First Search, Which basically traverse nodes level by level and it uses queue data structure for it's implementation.
+Time complexity : O(N)+O(2*Edges)
+Space Complexity : O(N)
+
+2) DFS : Deapth First Search, Which basically traverse nodes depth by depth then backtrack and again do the same process and ofcourse uses recursion for it's implementation or we can use explicit stack.
+Time complexity : O(N)+O(2*Edges)
+Space Complexity : O(N)
+
+Note : Ultimately we are traversing the nodes equal times and hence time complexity is same just the method of traversing is diff.
